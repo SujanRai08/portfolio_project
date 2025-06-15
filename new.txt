@@ -1,0 +1,42 @@
+healthcare_data_pipeline/
+├── dags/                         # Airflow DAGs if using Airflow
+│   └── healthcare_etl_dag.py
+│
+├── src/                          # Core Python modules/scripts
+│   ├── extract/                  # Data ingestion scripts
+│   │   └── extract_from_api.py
+│   ├── transform/               # Data transformation scripts
+│   │   └── clean_patient_data.py
+│   ├── load/                    # Data loading scripts
+│   │   └── load_to_postgres.py
+│   ├── utils/                   # Common utility functions
+│   │   └── logger.py
+│   └── config.py                # Configuration (paths, env vars)
+│
+├── notebooks/                   # Jupyter/Colab notebooks for exploration
+│   └── EDA.ipynb
+│
+├── sql/                         # SQL scripts for table creation, queries
+│   ├── create_tables.sql
+│   ├── data_quality_checks.sql
+│   └── transformations.sql
+│
+├── data/                        # Local datasets (if any)
+│   ├── raw/
+│   ├── processed/
+│   └── logs/
+│
+├── tests/                       # Unit and integration tests
+│   ├── test_extract.py
+│   ├── test_transform.py
+│   └── test_load.py
+│
+├── docker/                      # Docker and deployment setup
+│   └── Dockerfile
+│
+├── requirements.txt             # Python dependencies
+├── pyproject.toml               # (Optional) Python project config
+├── README.md                    # Project overview and documentation
+├── .env                         # Environment variables (e.g. API keys, DB creds)
+├── .gitignore                   # Ignore logs, data, secrets, etc.
+└── etl_pipeline.py              # Orchestration script if not using Airflow
