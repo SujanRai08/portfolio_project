@@ -54,7 +54,7 @@ class ProcessedRetailRecord(OnlineRetailRecord):
     year: int = Field(..., description="Year extracted from invoice_date")
     month: int = Field(..., description="Month extracted from invoice_date")
 
-    
+
     @validator('total_amount', pre=True, always=True)
     def calculate_total_amount(cls, v, values):
         """Calculate total amount from quantity and unit price"""

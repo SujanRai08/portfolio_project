@@ -17,11 +17,11 @@ class Settings(BaseSettings):
     db_password: str = "actual_password"
 
     raw_data_path: str = "data/raw/"
-    processed_data_path: str = "data/processed/"
+    processed_data_path: str
     log_path: str = "logs/"
 
     # Optional: Used only if file is already present locally
-    local_excel_file: str = "data/raw/online_retail.xlsx"
+    local_excel_file: str = "data/raw/Online_Retail.xlsx" 
 
     class Config:
         env_file = ".env"

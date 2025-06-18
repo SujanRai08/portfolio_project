@@ -138,6 +138,7 @@ ENV/
 env.bak/
 venv.bak/
 ecommerce_datapipeline/ecom_venv/
+ecom_venv/
 
 # Spyder project settings
 .spyderproject
